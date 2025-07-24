@@ -63,7 +63,6 @@ SetLuna revolutionizes web development education by combining the addictive gami
 
 - [ ] Create hero section component
 - [ ] Add features showcase section
-- [ ] Build pricing preview cards
 - [ ] Add call-to-action buttons
 - [ ] Create footer with links
 - [ ] Make landing page responsive

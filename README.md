@@ -1,7 +1,8 @@
 <div align="center">
 
 # 🌙 SetLuna
-### *Learn Web Development the Fun Way*
+
+### _Learn Web Development the Fun Way_
 
 **A gamified learning platform that transforms coding education through interactive lessons, GitHub integration, and AI-powered feedback**
 
@@ -21,12 +22,14 @@
 SetLuna revolutionizes web development education by combining the addictive gamification of Duolingo with real-world coding skills. Unlike traditional learning platforms, SetLuna integrates directly with GitHub, turning every commit into XP and every project into portfolio gold.
 
 ### **🎯 The Problem We're Solving**
+
 - **Boring Learning**: Traditional coding tutorials lack engagement and motivation
-- **No Real Portfolio**: Students learn in isolation without building actual projects  
+- **No Real Portfolio**: Students learn in isolation without building actual projects
 - **Missing Feedback Loop**: No personalized guidance on code quality and best practices
 - **Abandoned Learning**: High dropout rates due to lack of progress tracking and rewards
 
 ### **✨ Our Solution**
+
 - **Gamified Progression**: XP, levels, streaks, and badges keep learners motivated
 - **GitHub-First Learning**: Every lesson builds real projects that live in your portfolio
 - **AI-Powered Mentorship**: Future AI coach analyzes your commits and provides personalized feedback
@@ -47,11 +50,14 @@ SetLuna revolutionizes web development education by combining the addictive gami
 
 #### 🏗️ Project Structure Setup
 
-- [ ] Create `src/components/` folder structure
-- [ ] Create `src/lib/` for utilities
-- [ ] Create `src/types/` for TypeScript definitions
-- [ ] Create `src/hooks/` for custom React hooks
-- [ ] Set up path aliases in tsconfig.json
+- [x] create 'src/app/dashboard` for site main dashbaord 
+- [x] create 'src/app/onboarding' for onboarding page
+- [x] Create `src/components/` folder structure
+- [x] Create `src/lib/` for utilities
+- [x] Create `src/types/` for TypeScript definitions
+- [x] Create `src/hooks/` for custom React hooks
+- [x] Create `src/utils/` for shared utility functions
+
 
 #### 🎨 Landing Page
 
@@ -383,6 +389,7 @@ SetLuna revolutionizes web development education by combining the addictive gami
 <td width="50%">
 
 ### **🎯 Gamified Learning**
+
 - **XP System**: Earn points for lesson completion and code quality
 - **Level Progression**: Unlock new content as you advance
 - **Streak Tracking**: Build consistent learning habits
@@ -393,8 +400,9 @@ SetLuna revolutionizes web development education by combining the addictive gami
 <td width="50%">
 
 ### **💻 Interactive Coding**
+
 - **In-Browser Editor**: Write and test code without setup
-- **Live Preview**: See your HTML/CSS changes instantly  
+- **Live Preview**: See your HTML/CSS changes instantly
 - **Code Validation**: Get immediate feedback on your solutions
 - **Progressive Challenges**: From basic tags to full applications
 - **Hint System**: Stuck? Get contextual help without spoilers
@@ -405,6 +413,7 @@ SetLuna revolutionizes web development education by combining the addictive gami
 <td width="50%">
 
 ### **🐙 GitHub Integration**
+
 - **Portfolio Building**: Every lesson creates real repository content
 - **Commit Tracking**: Earn XP for good version control habits
 - **Deployment Guidance**: Learn to publish your projects live
@@ -415,8 +424,9 @@ SetLuna revolutionizes web development education by combining the addictive gami
 <td width="50%">
 
 ### **📚 Structured Curriculum**
+
 - **Stage 0**: HTML & CSS Foundations
-- **Stage 1**: Git & Version Control  
+- **Stage 1**: Git & Version Control
 - **Stage 2**: JavaScript Fundamentals
 - **Stage 3**: APIs & Modern JavaScript
 - **Stage 4**: React Components & Hooks
@@ -433,16 +443,16 @@ SetLuna revolutionizes web development education by combining the addictive gami
 
 <div align="center">
 
-| **Category** | **Technology** | **Why We Chose It** |
-|--------------|----------------|---------------------|
+| **Category** | **Technology**        | **Why We Chose It**                            |
+| ------------ | --------------------- | ---------------------------------------------- |
 | **Frontend** | Next.js 15 + React 19 | Latest features, App Router, Server Components |
-| **Language** | TypeScript | Type safety, better developer experience |
-| **Styling** | Tailwind CSS v4 | Rapid UI development, consistent design system |
-| **Database** | PostgreSQL + Prisma | Robust relational data, type-safe queries |
-| **Auth** | NextAuth.js | Secure, flexible authentication |
-| **Payments** | Stripe | Industry-standard payment processing |
-| **Hosting** | Vercel | Seamless Next.js deployment and scaling |
-| **AI** | OpenAI/Claude API | Code review and personalized feedback |
+| **Language** | TypeScript            | Type safety, better developer experience       |
+| **Styling**  | Tailwind CSS v4       | Rapid UI development, consistent design system |
+| **Database** | PostgreSQL + Prisma   | Robust relational data, type-safe queries      |
+| **Auth**     | NextAuth.js           | Secure, flexible authentication                |
+| **Payments** | Stripe                | Industry-standard payment processing           |
+| **Hosting**  | Vercel                | Seamless Next.js deployment and scaling        |
+| **AI**       | OpenAI/Claude API     | Code review and personalized feedback          |
 
 </div>
 
@@ -453,6 +463,7 @@ SetLuna revolutionizes web development education by combining the addictive gami
 This project demonstrates the power of **AI-assisted development** using Kiro IDE:
 
 ### **🤖 How Kiro Accelerated Development**
+
 - **Spec-Driven Architecture**: Used Kiro's spec system to plan and iterate on complex features
 - **Intelligent Code Generation**: Leveraged AI to scaffold components, API routes, and database schemas
 - **Multi-Modal Planning**: Discussed ideas through natural conversation, then implemented with precision
@@ -460,6 +471,7 @@ This project demonstrates the power of **AI-assisted development** using Kiro ID
 - **Context-Aware Assistance**: Kiro understood the full project context for better suggestions
 
 ### **🚀 From Idea to Implementation**
+
 SetLuna showcases how modern AI-powered development can transform the entire software creation process - from initial brainstorming to production-ready code. This isn't just about writing code faster; it's about building better architecture, making smarter decisions, and focusing on solving interesting problems while AI handles the heavy lifting.
 
 ---
@@ -492,8 +504,9 @@ Visit `http://localhost:3000` to see SetLuna in action!
 ## 🌟 **Future Vision**
 
 SetLuna represents the future of coding education where:
+
 - **Learning is addictive** through gamification and social features
-- **Every lesson builds your portfolio** with real GitHub projects  
+- **Every lesson builds your portfolio** with real GitHub projects
 - **AI mentorship is personalized** based on your actual code
 - **Community drives motivation** through challenges and collaboration
 - **Skills transfer directly to employment** with industry-standard practices
@@ -512,6 +525,6 @@ This project is actively developed and welcomes contributions! Whether you're in
 
 **Made with ❤️ and Kiro AI**
 
-*Transforming how developers learn, one commit at a time*
+_Transforming how developers learn, one commit at a time_
 
 </div>

@@ -24,12 +24,15 @@
   - Style primary CTA button with Luna purple theme, optimized for touch targets
   - _Requirements: 1.1, 1.2, 4.1, 5.1_
 
-- [ ] 4. Create interactive code editor component
+- [x] 4. Create interactive code editor component
 
-  - Build mobile-first live code editor with HTML/CSS/JS tabs
-  - Implement syntax highlighting with Luna theme colors
-  - Add real-time code preview functionality with responsive behavior
-  - Create animated background with floating code elements that work across devices
+  - Build mobile-first live code editor with enhanced HTML/CSS/JS tabs featuring color-coded indicators and active states
+  - Implement Monaco Editor with Luna dark theme, 16px font size, and syntax highlighting optimized for beginners
+  - Add toggle-based preview functionality: editor-only mode by default, fullscreen preview on "Run Code" click
+  - Create simplified Tailwind CSS examples with hero section gradient background matching the main design
+  - Implement HTML sanitization to prevent broken preview rendering and JavaScript code leakage
+  - Add Tailwind CSS CDN integration for proper utility class rendering in live preview
+  - Create animated background with floating code elements and responsive sizing (280px mobile, 900px desktop)
   - _Requirements: 8.2, 8.5, 2.2_
 
 - [ ] 5. Implement course/learning path section

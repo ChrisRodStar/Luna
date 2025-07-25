@@ -308,6 +308,91 @@
     border: 1px solid #334155;
   }
 
+  /* Interactive Code Editor specific styles */
+  .code-editor-container {
+    font-family: "JetBrains Mono", "Fira Code", "Consolas", monospace;
+  }
+
+  .code-editor-container textarea {
+    font-family: inherit;
+    line-height: 1.5;
+    tab-size: 2;
+  }
+
+  .code-editor-container .syntax-highlight {
+    font-family: inherit;
+    line-height: 1.5;
+  }
+
+  /* Syntax highlighting colors for Luna theme */
+  .syntax-html-tag {
+    color: #60a5fa; /* Blue for HTML tags */
+  }
+
+  .syntax-html-bracket {
+    color: #64748b; /* Gray for brackets */
+  }
+
+  .syntax-html-attribute {
+    color: #34d399; /* Green for attributes */
+  }
+
+  .syntax-html-string {
+    color: #fbbf24; /* Yellow for strings */
+  }
+
+  .syntax-css-selector {
+    color: #fbbf24; /* Yellow for CSS selectors */
+  }
+
+  .syntax-css-property {
+    color: #60a5fa; /* Blue for CSS properties */
+  }
+
+  .syntax-css-value {
+    color: #34d399; /* Green for CSS values */
+  }
+
+  .syntax-css-comment {
+    color: #64748b; /* Gray for comments */
+  }
+
+  .syntax-js-keyword {
+    color: #a78bfa; /* Purple for JS keywords */
+  }
+
+  .syntax-js-function {
+    color: #60a5fa; /* Blue for JS functions */
+  }
+
+  .syntax-js-string {
+    color: #34d399; /* Green for JS strings */
+  }
+
+  .syntax-js-comment {
+    color: #64748b; /* Gray for JS comments */
+  }
+
+  /* Floating code elements animation */
+  @keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+  }
+
+  .float-animation {
+    animation: float 3s ease-in-out infinite;
+  }
+
+  .float-animation-delayed {
+    animation: float 3s ease-in-out infinite;
+    animation-delay: 1s;
+  }
+
+  .float-animation-slow {
+    animation: float 4s ease-in-out infinite;
+    animation-delay: 0.5s;
+  }
+
   /* Luna Animation Utilities */
   .animate-on-scroll {
     opacity: 0;

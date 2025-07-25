@@ -1,92 +1,32 @@
 @import "tailwindcss";
 @import "tw-animate-css";
 
-@custom-variant dark (&:is(.dark *));
-
-@theme inline {
-  /* Base colors */
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  
-  /* Luna brand colors */
-  --color-primary: var(--primary);
-  --color-primary-foreground: var(--primary-foreground);
-  --color-secondary: var(--secondary);
-  --color-secondary-foreground: var(--secondary-foreground);
-  --color-accent: var(--accent);
-  --color-accent-foreground: var(--accent-foreground);
-  
-  /* Luna theme-specific colors */
-  --color-hero-background: var(--hero-background);
-  --color-code-background: var(--code-background);
-  --color-code-foreground: var(--code-foreground);
-  
-  /* UI colors */
-  --color-card: var(--card);
-  --color-card-foreground: var(--card-foreground);
-  --color-popover: var(--popover);
-  --color-popover-foreground: var(--popover-foreground);
-  --color-muted: var(--muted);
-  --color-muted-foreground: var(--muted-foreground);
-  --color-border: var(--border);
-  --color-input: var(--input);
-  --color-ring: var(--ring);
-  --color-destructive: var(--destructive);
-  
-  /* Chart colors */
-  --color-chart-1: var(--chart-1);
-  --color-chart-2: var(--chart-2);
-  --color-chart-3: var(--chart-3);
-  --color-chart-4: var(--chart-4);
-  --color-chart-5: var(--chart-5);
-  
-  /* Sidebar colors */
-  --color-sidebar: var(--sidebar);
-  --color-sidebar-foreground: var(--sidebar-foreground);
-  --color-sidebar-primary: var(--sidebar-primary);
-  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
-  --color-sidebar-accent: var(--sidebar-accent);
-  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
-  --color-sidebar-border: var(--sidebar-border);
-  --color-sidebar-ring: var(--sidebar-ring);
-  
-  /* Typography - Luna design system fonts */
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-  
-  /* Border radius */
-  --radius-sm: calc(var(--radius) - 4px);
-  --radius-md: calc(var(--radius) - 2px);
-  --radius-lg: var(--radius);
-  --radius-xl: calc(var(--radius) + 4px);
-}
-
 :root {
   --radius: 0.625rem;
-  
+
   /* Luna Design System - Light Theme */
   --background: oklch(1 0 0); /* Clean white */
   --foreground: oklch(0.15 0.02 270); /* Dark gray for text */
-  
+
   /* Luna Primary Colors - Deep Purple */
   --primary: oklch(0.55 0.15 270); /* Deep purple #8B5CF6 equivalent */
   --primary-foreground: oklch(1 0 0); /* White text on purple */
-  
+
   /* Luna Secondary Colors - Slate Blue */
   --secondary: oklch(0.45 0.08 250); /* Slate blue #475569 equivalent */
   --secondary-foreground: oklch(1 0 0); /* White text on slate */
-  
+
   /* Luna Moon Theme - Soft Gold */
   --accent: oklch(0.75 0.12 85); /* Soft gold #F59E0B equivalent */
   --accent-foreground: oklch(0.15 0.02 270); /* Dark text on gold */
-  
+
   /* Luna Dark Navy for Hero */
   --hero-background: oklch(0.18 0.05 250); /* Dark navy #1E293B equivalent */
-  
+
   /* Code Editor Theme */
   --code-background: oklch(0.08 0.02 250); /* Very dark #0F172A equivalent */
   --code-foreground: oklch(0.9 0.02 250); /* Light text for code */
-  
+
   /* Standard UI Colors */
   --card: oklch(1 0 0);
   --card-foreground: oklch(0.15 0.02 270);
@@ -98,14 +38,14 @@
   --border: oklch(0.92 0.02 250);
   --input: oklch(0.92 0.02 250);
   --ring: oklch(0.55 0.15 270); /* Match primary for focus rings */
-  
+
   /* Chart colors with Luna theme */
   --chart-1: oklch(0.55 0.15 270); /* Primary purple */
   --chart-2: oklch(0.75 0.12 85); /* Moon gold */
   --chart-3: oklch(0.45 0.08 250); /* Slate blue */
   --chart-4: oklch(0.65 0.1 200); /* Complementary blue */
   --chart-5: oklch(0.7 0.1 120); /* Complementary green */
-  
+
   /* Sidebar colors */
   --sidebar: oklch(0.98 0.005 250);
   --sidebar-foreground: oklch(0.15 0.02 270);
@@ -121,26 +61,26 @@
   /* Luna Design System - Dark Theme */
   --background: oklch(0.18 0.05 250); /* Dark navy background */
   --foreground: oklch(0.95 0.01 250); /* Light text */
-  
+
   /* Luna Primary Colors - Brighter Purple for dark mode */
   --primary: oklch(0.65 0.18 270); /* Brighter purple for dark mode */
   --primary-foreground: oklch(0.05 0.02 270); /* Dark text on bright purple */
-  
+
   /* Luna Secondary Colors - Lighter Slate */
   --secondary: oklch(0.35 0.06 250); /* Darker slate for dark mode */
   --secondary-foreground: oklch(0.95 0.01 250); /* Light text */
-  
+
   /* Luna Moon Theme - Brighter Gold */
   --accent: oklch(0.8 0.15 85); /* Brighter gold for dark mode */
   --accent-foreground: oklch(0.1 0.02 270); /* Dark text on bright gold */
-  
+
   /* Hero background - even darker */
   --hero-background: oklch(0.08 0.02 250); /* Very dark for hero */
-  
+
   /* Code Editor Theme - consistent */
   --code-background: oklch(0.05 0.01 250); /* Darkest for code */
   --code-foreground: oklch(0.9 0.02 250); /* Light code text */
-  
+
   /* Standard UI Colors for dark mode */
   --card: oklch(0.25 0.04 250);
   --card-foreground: oklch(0.95 0.01 250);
@@ -152,14 +92,14 @@
   --border: oklch(1 0 0 / 10%);
   --input: oklch(1 0 0 / 15%);
   --ring: oklch(0.65 0.18 270); /* Match primary for focus rings */
-  
+
   /* Chart colors for dark mode */
   --chart-1: oklch(0.65 0.18 270); /* Primary purple */
   --chart-2: oklch(0.8 0.15 85); /* Moon gold */
   --chart-3: oklch(0.55 0.08 250); /* Slate blue */
   --chart-4: oklch(0.7 0.12 200); /* Complementary blue */
   --chart-5: oklch(0.75 0.12 120); /* Complementary green */
-  
+
   /* Sidebar colors for dark mode */
   --sidebar: oklch(0.25 0.04 250);
   --sidebar-foreground: oklch(0.95 0.01 250);
@@ -173,97 +113,255 @@
 
 @layer base {
   * {
-    @apply border-border outline-ring/50;
+    box-sizing: border-box;
   }
+
   body {
-    @apply bg-background text-foreground font-sans;
+    background-color: white;
+    color: #1f2937;
+    font-family: "Inter", system-ui, sans-serif;
+    margin: 0;
+    padding: 0;
   }
-  
+
   /* Luna typography base styles */
-  h1, h2, h3, h4, h5, h6 {
-    @apply font-sans font-bold tracking-tight;
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: "Inter", system-ui, sans-serif;
+    font-weight: 700;
+    letter-spacing: -0.025em;
   }
-  
+
   /* Smooth scrolling for navigation */
   html {
     scroll-behavior: smooth;
+  }
+
+  /* Scroll offset for fixed header navigation */
+  section[id] {
+    scroll-margin-top: 4rem; /* 64px offset for mobile fixed header */
+  }
+
+  @media (min-width: 768px) {
+    section[id] {
+      scroll-margin-top: 4.5rem; /* 72px offset for tablet fixed header */
+    }
+  }
+
+  @media (min-width: 1024px) {
+    section[id] {
+      scroll-margin-top: 5rem; /* 80px offset for desktop fixed header */
+    }
   }
 }
 
 @layer components {
   /* Luna Button Variants */
   .btn-luna-primary {
-    @apply bg-luna-purple-500 hover:bg-luna-purple-600 text-white font-semibold px-6 py-3 rounded-lg transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-luna-purple-500 focus:ring-offset-2;
+    background-color: #8b5cf6;
+    color: white;
+    font-weight: 600;
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.5rem;
+    transition: all 0.2s;
+    border: none;
+    cursor: pointer;
   }
-  
+
+  .btn-luna-primary:hover {
+    background-color: #7c3aed;
+  }
+
+  .btn-luna-primary:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px #8b5cf6, 0 0 0 4px rgba(139, 92, 246, 0.2);
+  }
+
   .btn-luna-secondary {
-    @apply bg-luna-slate-600 hover:bg-luna-slate-700 text-white font-semibold px-6 py-3 rounded-lg transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-luna-slate-600 focus:ring-offset-2;
+    background-color: #475569;
+    color: white;
+    font-weight: 600;
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.5rem;
+    transition: all 0.2s;
+    border: none;
+    cursor: pointer;
   }
-  
+
+  .btn-luna-secondary:hover {
+    background-color: #334155;
+  }
+
   .btn-luna-accent {
-    @apply bg-luna-gold-500 hover:bg-luna-gold-600 text-luna-slate-900 font-semibold px-6 py-3 rounded-lg transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-luna-gold-500 focus:ring-offset-2;
+    background-color: #f59e0b;
+    color: #1f2937;
+    font-weight: 600;
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.5rem;
+    transition: all 0.2s;
+    border: none;
+    cursor: pointer;
   }
-  
+
+  .btn-luna-accent:hover {
+    background-color: #d97706;
+  }
+
   /* Luna Card Styles */
   .card-luna {
-    @apply bg-card border border-border rounded-lg shadow-sm hover:shadow-md transition-shadow duration-200;
+    background-color: white;
+    border: 1px solid #e2e8f0;
+    border-radius: 0.5rem;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.2s;
   }
-  
+
+  .card-luna:hover {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+
   /* Luna Section Spacing */
   .section-luna {
-    @apply py-16 md:py-24 lg:py-32;
+    padding: 4rem 0;
   }
-  
+
+  @media (min-width: 768px) {
+    .section-luna {
+      padding: 6rem 0;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .section-luna {
+      padding: 8rem 0;
+    }
+  }
+
   /* Luna Container */
   .container-luna {
-    @apply container mx-auto px-4 sm:px-6 lg:px-8;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
   }
-  
+
+  @media (min-width: 640px) {
+    .container-luna {
+      padding: 0 1.5rem;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .container-luna {
+      padding: 0 2rem;
+    }
+  }
+
   /* Luna Hero Text Styles */
   .hero-title {
-    @apply text-hero-lg md:text-hero-xl font-bold text-foreground leading-tight tracking-tight;
+    font-size: 3rem;
+    font-weight: 700;
+    line-height: 1.1;
+    letter-spacing: -0.025em;
   }
-  
+
+  @media (min-width: 768px) {
+    .hero-title {
+      font-size: 4rem;
+      font-weight: 800;
+    }
+  }
+
   .hero-subtitle {
-    @apply text-body-lg md:text-xl text-muted-foreground leading-relaxed;
+    font-size: 1.125rem;
+    line-height: 1.6;
   }
-  
+
+  @media (min-width: 768px) {
+    .hero-subtitle {
+      font-size: 1.25rem;
+    }
+  }
+
   /* Luna Code Editor Styles */
   .code-editor {
-    @apply bg-code-bg text-code-foreground font-mono rounded-lg border border-border;
+    background-color: #0f172a;
+    color: #e2e8f0;
+    font-family: "JetBrains Mono", monospace;
+    border-radius: 0.5rem;
+    border: 1px solid #334155;
   }
-  
+
   /* Luna Animation Utilities */
   .animate-on-scroll {
-    @apply opacity-0 translate-y-4 transition-all duration-700 ease-out;
+    opacity: 0;
+    transform: translateY(1rem);
+    transition: all 0.7s ease-out;
   }
-  
+
   .animate-on-scroll.visible {
-    @apply opacity-100 translate-y-0;
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 
 @layer utilities {
   /* Luna spacing utilities */
-  .space-luna-sm {
-    @apply space-y-4;
+  .space-luna-sm > * + * {
+    margin-top: 1rem;
   }
-  
-  .space-luna-md {
-    @apply space-y-8;
+
+  .space-luna-md > * + * {
+    margin-top: 2rem;
   }
-  
-  .space-luna-lg {
-    @apply space-y-12;
+
+  .space-luna-lg > * + * {
+    margin-top: 3rem;
   }
-  
+
   /* Luna text utilities */
   .text-balance {
     text-wrap: balance;
   }
-  
-  /* Luna focus utilities */
-  .focus-luna {
-    @apply focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2;
+
+  .text-section-title {
+    font-size: 2rem;
+    font-weight: 700;
+    line-height: 1.25;
+  }
+
+  .text-card-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    line-height: 1.3;
+  }
+
+  /* Navigation utilities */
+  .nav-link {
+    font-weight: 500;
+    transition: color 0.2s;
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+
+  .nav-link-mobile {
+    display: flex;
+    align-items: center;
+    min-height: 44px;
+    padding: 0.5rem 1rem;
+    color: #1f2937;
+    font-weight: 500;
+    text-align: left;
+    border-radius: 0.5rem;
+    transition: all 0.2s;
+  }
+
+  .nav-link-mobile:hover {
+    color: #8b5cf6;
+    background-color: #f8fafc;
   }
 }

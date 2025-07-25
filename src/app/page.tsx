@@ -1,23 +1,13 @@
+import Navigation from '@/components/Navigation';
+
 export default function Home() {
   return (
     <div className="min-h-screen bg-background">
       {/* Navigation Header */}
-      <header className="w-full border-b border-border">
-        <div className="container-luna py-4">
-          <div className="flex items-center justify-between">
-            <div className="flex items-center space-x-2">
-              <span className="text-2xl">🌙</span>
-              <span className="text-xl font-bold text-foreground">Luna</span>
-            </div>
-            <button className="btn-luna-primary">
-              Start Learning
-            </button>
-          </div>
-        </div>
-      </header>
+      <Navigation />
 
       {/* Hero Section */}
-      <section className="w-full bg-hero-bg text-white section-luna">
+      <section id="hero" className="w-full text-white section-luna pt-16 md:pt-18 lg:pt-20" style={{backgroundColor: '#1e293b'}}>
         <div className="container-luna">
           <div className="text-center space-luna-lg">
             <h1 className="hero-title text-white">
@@ -41,7 +31,7 @@ export default function Home() {
       </section>
 
       {/* Course/Learning Path Section */}
-      <section className="w-full section-luna">
+      <section id="courses" className="w-full section-luna">
         <div className="container-luna">
           <h2 className="text-section-title text-center mb-12">
             Choose Your Learning Path
@@ -49,19 +39,19 @@ export default function Home() {
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             <div className="card-luna p-6">
               <h3 className="text-card-title mb-4">Full-Stack Development</h3>
-              <p className="text-muted-foreground">
+              <p style={{color: '#64748b'}}>
                 Master HTML, CSS, JavaScript, React, TypeScript, and Next.js
               </p>
             </div>
             <div className="card-luna p-6">
               <h3 className="text-card-title mb-4">Frontend Specialist</h3>
-              <p className="text-muted-foreground">
+              <p style={{color: '#64748b'}}>
                 Focus on HTML, CSS, JavaScript, and React
               </p>
             </div>
             <div className="card-luna p-6">
               <h3 className="text-card-title mb-4">AI-Enhanced Development</h3>
-              <p className="text-muted-foreground">
+              <p style={{color: '#64748b'}}>
                 Coming soon - Learn with AI assistance
               </p>
             </div>
@@ -70,7 +60,7 @@ export default function Home() {
       </section>
 
       {/* Platform Features Section */}
-      <section className="w-full bg-muted section-luna">
+      <section id="features" className="w-full section-luna" style={{backgroundColor: '#f8fafc'}}>
         <div className="container-luna">
           <h2 className="text-section-title text-center mb-12">
             Why Choose Luna?
@@ -78,16 +68,16 @@ export default function Home() {
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="space-luna-md">
               <h3 className="text-card-title">Gamified Learning</h3>
-              <p className="text-muted-foreground">
+              <p style={{color: '#64748b'}}>
                 Learn with interactive exercises, challenges, and projects, crafted by learning experts.
               </p>
             </div>
             <div className="code-editor p-4">
-              <div className="text-luna-gold-400 text-sm mb-2">// Example lesson</div>
-              <div className="text-code-foreground">
-                <span className="text-luna-purple-400">const</span>{" "}
-                <span className="text-luna-gold-400">greeting</span> = 
-                <span className="text-green-400">"Hello, Luna!"</span>;
+              <div className="text-sm mb-2" style={{color: '#f59e0b'}}>// Example lesson</div>
+              <div>
+                <span style={{color: '#8b5cf6'}}>const</span>{" "}
+                <span style={{color: '#f59e0b'}}>greeting</span> = 
+                <span style={{color: '#10b981'}}>"Hello, Luna!"</span>;
               </div>
             </div>
           </div>
@@ -95,7 +85,7 @@ export default function Home() {
       </section>
 
       {/* Final CTA Section */}
-      <section className="w-full bg-hero-bg text-white section-luna">
+      <section id="about" className="w-full text-white section-luna" style={{backgroundColor: '#1e293b'}}>
         <div className="container-luna text-center space-luna-md">
           <h2 className="hero-title text-white">
             Ready to Start Your Coding Journey? 🌙
@@ -115,9 +105,9 @@ export default function Home() {
           <div className="flex flex-col md:flex-row justify-between items-center">
             <div className="flex items-center space-x-2 mb-4 md:mb-0">
               <span className="text-2xl">🌙</span>
-              <span className="text-xl font-bold text-foreground">Luna</span>
+              <span className="text-xl font-bold">Luna</span>
             </div>
-            <p className="text-muted-foreground text-sm">
+            <p className="text-sm" style={{color: '#64748b'}}>
               © 2024 Luna. Learn web development the fun way.
             </p>
           </div>

@@ -286,6 +286,19 @@
     }
   }
 
+  /* Hero section specific styles */
+  .hero-section {
+    background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+  }
+
+  /* Touch-friendly button styles for mobile */
+  @media (max-width: 768px) {
+    .touch-target {
+      min-height: 44px;
+      min-width: 44px;
+    }
+  }
+
   /* Luna Code Editor Styles */
   .code-editor {
     background-color: #0f172a;

@@ -1,102 +1,127 @@
-import Image from "next/image";
-
 export default function Home() {
   return (
-    <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="font-mono list-inside list-decimal text-sm/6 text-center sm:text-left">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] font-mono font-semibold px-1 py-0.5 rounded">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+    <div className="min-h-screen bg-background">
+      {/* Navigation Header */}
+      <header className="w-full border-b border-border">
+        <div className="container-luna py-4">
+          <div className="flex items-center justify-between">
+            <div className="flex items-center space-x-2">
+              <span className="text-2xl">🌙</span>
+              <span className="text-xl font-bold text-foreground">Luna</span>
+            </div>
+            <button className="btn-luna-primary">
+              Start Learning
+            </button>
+          </div>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
+      </header>
+
+      {/* Hero Section */}
+      <section className="w-full bg-hero-bg text-white section-luna">
+        <div className="container-luna">
+          <div className="text-center space-luna-lg">
+            <h1 className="hero-title text-white">
+              Learn Web Development.<br />
+              Build Real Projects.<br />
+              Get Hired. 🌙✨
+            </h1>
+            <p className="hero-subtitle text-white/80 max-w-2xl mx-auto">
+              Join thousands learning to code through gamified lessons and AI feedback.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+              <button className="btn-luna-primary">
+                Start Learning Now
+              </button>
+              <button className="btn-luna-accent">
+                Try Free Lesson
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Course/Learning Path Section */}
+      <section className="w-full section-luna">
+        <div className="container-luna">
+          <h2 className="text-section-title text-center mb-12">
+            Choose Your Learning Path
+          </h2>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div className="card-luna p-6">
+              <h3 className="text-card-title mb-4">Full-Stack Development</h3>
+              <p className="text-muted-foreground">
+                Master HTML, CSS, JavaScript, React, TypeScript, and Next.js
+              </p>
+            </div>
+            <div className="card-luna p-6">
+              <h3 className="text-card-title mb-4">Frontend Specialist</h3>
+              <p className="text-muted-foreground">
+                Focus on HTML, CSS, JavaScript, and React
+              </p>
+            </div>
+            <div className="card-luna p-6">
+              <h3 className="text-card-title mb-4">AI-Enhanced Development</h3>
+              <p className="text-muted-foreground">
+                Coming soon - Learn with AI assistance
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Platform Features Section */}
+      <section className="w-full bg-muted section-luna">
+        <div className="container-luna">
+          <h2 className="text-section-title text-center mb-12">
+            Why Choose Luna?
+          </h2>
+          <div className="grid md:grid-cols-2 gap-12 items-center">
+            <div className="space-luna-md">
+              <h3 className="text-card-title">Gamified Learning</h3>
+              <p className="text-muted-foreground">
+                Learn with interactive exercises, challenges, and projects, crafted by learning experts.
+              </p>
+            </div>
+            <div className="code-editor p-4">
+              <div className="text-luna-gold-400 text-sm mb-2">// Example lesson</div>
+              <div className="text-code-foreground">
+                <span className="text-luna-purple-400">const</span>{" "}
+                <span className="text-luna-gold-400">greeting</span> = 
+                <span className="text-green-400">"Hello, Luna!"</span>;
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Final CTA Section */}
+      <section className="w-full bg-hero-bg text-white section-luna">
+        <div className="container-luna text-center space-luna-md">
+          <h2 className="hero-title text-white">
+            Ready to Start Your Coding Journey? 🌙
+          </h2>
+          <p className="hero-subtitle text-white/80 max-w-2xl mx-auto">
+            Join Luna today and transform from beginner to developer - completely free, forever.
+          </p>
+          <button className="btn-luna-primary text-lg px-8 py-4">
+            Start Learning Now - Free Forever
+          </button>
+        </div>
+      </section>
+
+      {/* Footer */}
+      <footer className="w-full border-t border-border py-8">
+        <div className="container-luna">
+          <div className="flex flex-col md:flex-row justify-between items-center">
+            <div className="flex items-center space-x-2 mb-4 md:mb-0">
+              <span className="text-2xl">🌙</span>
+              <span className="text-xl font-bold text-foreground">Luna</span>
+            </div>
+            <p className="text-muted-foreground text-sm">
+              © 2024 Luna. Learn web development the fun way.
+            </p>
+          </div>
+        </div>
       </footer>
     </div>
   );

@@ -1,18 +1,19 @@
 import Navigation from "@/components/Navigation";
 import InteractiveCodeEditor from "@/components/InteractiveCodeEditor";
 import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
+import Link from "next/link";
+import Image from "next/image";
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen">
       {/* Navigation Header */}
       <Navigation />
 
       {/* Hero Section */}
       <section
         id="hero"
-        className="w-full text-white min-h-screen flex items-center pt-16 md:pt-18 lg:pt-20 hero-section"
+        className="w-full text-white min-h-screen flex items-center pt-16 md:pt-18 lg:pt-20"
       >
         <div className="container-luna w-full">
           {/* Mobile-first split-layout hero using Tailwind grid */}
@@ -20,57 +21,47 @@ export default function Home() {
             {/* Content Section - Left side on desktop, top on mobile */}
             <div className="lg:col-span-2 space-y-6 lg:space-y-8 text-center lg:text-left">
               {/* Large, bold multi-line headline with responsive typography */}
-              <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold leading-tight tracking-tight text-white">
-                Learn Web Development.
+              <h1 className="hero-title text-white">
+                Learn to code
                 <br />
-                Build Real Projects.
+                Build a portfolio
                 <br />
-                Get Hired. <span className="inline-block">🌙✨</span>
+                Get hire
               </h1>
 
               {/* Supporting text */}
-              <p className="text-lg sm:text-xl lg:text-2xl text-white/80 max-w-2xl mx-auto lg:mx-0 leading-relaxed">
+              <p className="hero-subtitle text-white/80 max-w-2xl mx-auto lg:mx-0">
                 Join thousands learning to code through gamified lessons and AI
                 feedback.
               </p>
 
-              {/* Integrated sign-up form using shadcn/ui components */}
+              {/* CTA buttons */}
               <div className="space-y-4 max-w-md mx-auto lg:mx-0">
-                <div className="space-y-3">
-                  <Input
-                    type="email"
-                    placeholder="Enter your email"
-                    className="h-12 text-base bg-white/10 border-white/20 text-white placeholder:text-white/60 focus:bg-white/20 focus:border-white/40"
-                  />
-                  <Input
-                    type="password"
-                    placeholder="Create a password"
-                    className="h-12 text-base bg-white/10 border-white/20 text-white placeholder:text-white/60 focus:bg-white/20 focus:border-white/40"
-                  />
-                </div>
-
                 {/* Primary CTA button with Luna purple theme, optimized for touch targets */}
-                <Button
-                  size="lg"
-                  className="w-full h-12 text-base font-semibold bg-primary hover:bg-primary/90 text-primary-foreground shadow-lg transition-all duration-200 hover:shadow-xl hover:scale-[1.02] active:scale-[0.98]"
-                >
-                  Start Learning Now - Free Forever
-                </Button>
+                <Link href="/signup">
+                  <Button
+                    size="lg"
+                    className="btn-luna btn-luna-primary w-full h-12 text-base font-semibold shadow-lg hover:shadow-xl hover:scale-[1.02] active:scale-[0.98]"
+                  >
+                    Start Learning Now
+                  </Button>
+                </Link>
 
-                {/* Secondary CTA */}
+                {/* Google Sign In CTA */}
                 <Button
                   variant="outline"
                   size="lg"
-                  className="w-full h-12 text-base font-medium bg-transparent border-white/30 text-white hover:bg-white/10 hover:border-white/50 transition-all duration-200"
+                  className="w-full h-12 mt-4 text-base font-medium bg-white hover:bg-gray-50 border-white text-gray-700 hover:text-gray-800 transition-all duration-200 flex items-center justify-center gap-3"
                 >
-                  Try Free Lesson
+                  <Image
+                    src="/google.svg" // Path to your Google SVG in the public directory
+                    alt="Google logo"
+                    width={24} // Specify the width of the SVG
+                    height={24} // Specify the height of the SVG
+                  />
+                  Sign in with Google
                 </Button>
               </div>
-
-              {/* Trust indicator */}
-              <p className="text-sm text-white/60 max-w-md mx-auto lg:mx-0">
-                No credit card required • Start coding in 2 minutes
-              </p>
             </div>
 
             {/* Interactive Demo Section - Desktop only */}
@@ -90,19 +81,19 @@ export default function Home() {
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             <div className="card-luna p-6">
               <h3 className="text-card-title mb-4">Full-Stack Development</h3>
-              <p style={{ color: "#64748b" }}>
+              <p className="text-muted-foreground">
                 Master HTML, CSS, JavaScript, React, TypeScript, and Next.js
               </p>
             </div>
             <div className="card-luna p-6">
               <h3 className="text-card-title mb-4">Frontend Specialist</h3>
-              <p style={{ color: "#64748b" }}>
+              <p className="text-muted-foreground">
                 Focus on HTML, CSS, JavaScript, and React
               </p>
             </div>
             <div className="card-luna p-6">
               <h3 className="text-card-title mb-4">AI-Enhanced Development</h3>
-              <p style={{ color: "#64748b" }}>
+              <p className="text-muted-foreground">
                 Coming soon - Learn with AI assistance
               </p>
             </div>
@@ -111,11 +102,7 @@ export default function Home() {
       </section>
 
       {/* Platform Features Section */}
-      <section
-        id="features"
-        className="w-full section-luna"
-        style={{ backgroundColor: "#f8fafc" }}
-      >
+      <section id="features" className="w-full section-luna">
         <div className="container-luna">
           <h2 className="text-section-title text-center mb-12">
             Why Choose Luna?
@@ -123,19 +110,17 @@ export default function Home() {
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="space-luna-md">
               <h3 className="text-card-title">Gamified Learning</h3>
-              <p style={{ color: "#64748b" }}>
+              <p className="text-muted-foreground">
                 Learn with interactive exercises, challenges, and projects,
                 crafted by learning experts.
               </p>
             </div>
-            <div className="code-editor p-4">
-              <div className="text-sm mb-2" style={{ color: "#f59e0b" }}>
-                // Example lesson
-              </div>
-              <div>
-                <span style={{ color: "#8b5cf6" }}>const</span>{" "}
-                <span style={{ color: "#f59e0b" }}>greeting</span> =
-                <span style={{ color: "#10b981" }}>"Hello, Luna!"</span>;
+            <div className="card-luna p-4">
+              <div className="text-sm mb-2 text-accent">// Example lesson</div>
+              <div className="text-code-foreground">
+                <span className="text-primary">const</span>{" "}
+                <span className="text-accent">greeting</span> =
+                <span className="text-green-400">"Hello, Luna!"</span>;
               </div>
             </div>
           </div>
@@ -143,11 +128,7 @@ export default function Home() {
       </section>
 
       {/* Final CTA Section */}
-      <section
-        id="about"
-        className="w-full text-white section-luna"
-        style={{ backgroundColor: "#1e293b" }}
-      >
+      <section id="about" className="w-full text-white section-luna">
         <div className="container-luna text-center space-luna-md">
           <h2 className="hero-title text-white">
             Ready to Start Your Coding Journey? 🌙
@@ -156,9 +137,11 @@ export default function Home() {
             Join Luna today and transform from beginner to developer -
             completely free, forever.
           </p>
-          <button className="btn-luna-primary text-lg px-8 py-4">
-            Start Learning Now - Free Forever
-          </button>
+          <Link href="/signup">
+            <button className="btn-luna btn-luna-primary text-lg px-8 py-4">
+              Start Learning Now - Free Forever
+            </button>
+          </Link>
         </div>
       </section>
 
@@ -168,10 +151,10 @@ export default function Home() {
           <div className="flex flex-col md:flex-row justify-between items-center">
             <div className="flex items-center space-x-2 mb-4 md:mb-0">
               <span className="text-2xl">🌙</span>
-              <span className="text-xl font-bold">Luna</span>
+              <span className="text-xl font-bold text-foreground">Luna</span>
             </div>
-            <p className="text-sm" style={{ color: "#64748b" }}>
-              © 2024 Luna. Learn web development the fun way.
+            <p className="text-sm text-muted-foreground">
+              © 2025 Luna. Learn web development the fun way.
             </p>
           </div>
         </div>

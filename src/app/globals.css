@@ -4,396 +4,223 @@
 :root {
   --radius: 0.625rem;
 
-  /* Luna Design System - Light Theme */
-  --background: oklch(1 0 0); /* Clean white */
-  --foreground: oklch(0.15 0.02 270); /* Dark gray for text */
-
-  /* Luna Primary Colors - Deep Purple */
-  --primary: oklch(0.55 0.15 270); /* Deep purple #8B5CF6 equivalent */
-  --primary-foreground: oklch(1 0 0); /* White text on purple */
-
-  /* Luna Secondary Colors - Slate Blue */
-  --secondary: oklch(0.45 0.08 250); /* Slate blue #475569 equivalent */
-  --secondary-foreground: oklch(1 0 0); /* White text on slate */
-
-  /* Luna Moon Theme - Soft Gold */
-  --accent: oklch(0.75 0.12 85); /* Soft gold #F59E0B equivalent */
-  --accent-foreground: oklch(0.15 0.02 270); /* Dark text on gold */
-
-  /* Luna Dark Navy for Hero */
-  --hero-background: oklch(0.18 0.05 250); /* Dark navy #1E293B equivalent */
-
-  /* Code Editor Theme */
-  --code-background: oklch(0.08 0.02 250); /* Very dark #0F172A equivalent */
-  --code-foreground: oklch(0.9 0.02 250); /* Light text for code */
-
-  /* Standard UI Colors */
-  --card: oklch(1 0 0);
-  --card-foreground: oklch(0.15 0.02 270);
-  --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.15 0.02 270);
-  --muted: oklch(0.96 0.01 250);
-  --muted-foreground: oklch(0.55 0.05 250);
-  --destructive: oklch(0.577 0.245 27.325);
-  --border: oklch(0.92 0.02 250);
-  --input: oklch(0.92 0.02 250);
-  --ring: oklch(0.55 0.15 270); /* Match primary for focus rings */
-
-  /* Chart colors with Luna theme */
-  --chart-1: oklch(0.55 0.15 270); /* Primary purple */
-  --chart-2: oklch(0.75 0.12 85); /* Moon gold */
-  --chart-3: oklch(0.45 0.08 250); /* Slate blue */
-  --chart-4: oklch(0.65 0.1 200); /* Complementary blue */
-  --chart-5: oklch(0.7 0.1 120); /* Complementary green */
-
-  /* Sidebar colors */
-  --sidebar: oklch(0.98 0.005 250);
-  --sidebar-foreground: oklch(0.15 0.02 270);
-  --sidebar-primary: oklch(0.55 0.15 270);
-  --sidebar-primary-foreground: oklch(1 0 0);
-  --sidebar-accent: oklch(0.96 0.01 250);
-  --sidebar-accent-foreground: oklch(0.15 0.02 270);
-  --sidebar-border: oklch(0.92 0.02 250);
-  --sidebar-ring: oklch(0.55 0.15 270);
-}
-
-.dark {
-  /* Luna Design System - Dark Theme */
-  --background: oklch(0.18 0.05 250); /* Dark navy background */
-  --foreground: oklch(0.95 0.01 250); /* Light text */
-
-  /* Luna Primary Colors - Brighter Purple for dark mode */
-  --primary: oklch(0.65 0.18 270); /* Brighter purple for dark mode */
-  --primary-foreground: oklch(0.05 0.02 270); /* Dark text on bright purple */
-
-  /* Luna Secondary Colors - Lighter Slate */
-  --secondary: oklch(0.35 0.06 250); /* Darker slate for dark mode */
-  --secondary-foreground: oklch(0.95 0.01 250); /* Light text */
-
-  /* Luna Moon Theme - Brighter Gold */
-  --accent: oklch(0.8 0.15 85); /* Brighter gold for dark mode */
-  --accent-foreground: oklch(0.1 0.02 270); /* Dark text on bright gold */
-
-  /* Hero background - even darker */
-  --hero-background: oklch(0.08 0.02 250); /* Very dark for hero */
-
-  /* Code Editor Theme - consistent */
-  --code-background: oklch(0.05 0.01 250); /* Darkest for code */
-  --code-foreground: oklch(0.9 0.02 250); /* Light code text */
-
-  /* Standard UI Colors for dark mode */
-  --card: oklch(0.25 0.04 250);
-  --card-foreground: oklch(0.95 0.01 250);
-  --popover: oklch(0.25 0.04 250);
-  --popover-foreground: oklch(0.95 0.01 250);
+  /* Luna Design System - Dark Theme Variables */
+  --background: oklch(0.18 0.05 250);
+  --foreground: oklch(0.95 0.01 250);
+  --primary: oklch(0.65 0.18 270);
+  --primary-foreground: oklch(0.05 0.02 270);
+  --secondary: oklch(0.35 0.06 250);
+  --secondary-foreground: oklch(0.95 0.01 250);
+  --accent: oklch(0.8 0.15 85);
+  --accent-foreground: oklch(0.1 0.02 270);
   --muted: oklch(0.3 0.04 250);
   --muted-foreground: oklch(0.7 0.04 250);
   --destructive: oklch(0.7 0.19 22);
   --border: oklch(1 0 0 / 10%);
   --input: oklch(1 0 0 / 15%);
-  --ring: oklch(0.65 0.18 270); /* Match primary for focus rings */
+  --ring: var(--primary);
 
-  /* Chart colors for dark mode */
-  --chart-1: oklch(0.65 0.18 270); /* Primary purple */
-  --chart-2: oklch(0.8 0.15 85); /* Moon gold */
-  --chart-3: oklch(0.55 0.08 250); /* Slate blue */
-  --chart-4: oklch(0.7 0.12 200); /* Complementary blue */
-  --chart-5: oklch(0.75 0.12 120); /* Complementary green */
+  /* Specialized backgrounds */
+  --hero-background: oklch(0.08 0.02 250);
+  --code-background: oklch(0.05 0.01 250);
+  --code-foreground: oklch(0.9 0.02 250);
+  --card: oklch(0.25 0.04 250);
+  --card-foreground: var(--foreground);
+  --popover: var(--card);
+  --popover-foreground: var(--card-foreground);
 
-  /* Sidebar colors for dark mode */
-  --sidebar: oklch(0.25 0.04 250);
-  --sidebar-foreground: oklch(0.95 0.01 250);
-  --sidebar-primary: oklch(0.65 0.18 270);
-  --sidebar-primary-foreground: oklch(0.05 0.02 270);
-  --sidebar-accent: oklch(0.3 0.04 250);
-  --sidebar-accent-foreground: oklch(0.95 0.01 250);
-  --sidebar-border: oklch(1 0 0 / 10%);
-  --sidebar-ring: oklch(0.65 0.18 270);
+  /* Chart colors */
+  --chart-1: var(--primary);
+  --chart-2: var(--accent);
+  --chart-3: oklch(0.55 0.08 250);
+  --chart-4: oklch(0.7 0.12 200);
+  --chart-5: oklch(0.75 0.12 120);
+
+  /* Sidebar colors */
+  --sidebar: var(--card);
+  --sidebar-foreground: var(--foreground);
+  --sidebar-primary: var(--primary);
+  --sidebar-primary-foreground: var(--primary-foreground);
+  --sidebar-accent: var(--muted);
+  --sidebar-accent-foreground: var(--foreground);
+  --sidebar-border: var(--border);
+  --sidebar-ring: var(--ring);
 }
 
 @layer base {
-  * {
-    box-sizing: border-box;
-  }
-
   body {
-    background-color: white;
-    color: #1f2937;
-    font-family: "Inter", system-ui, sans-serif;
+    background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+    color: var(--foreground);
+    font-family: var(--font-jetbrains-mono);
     margin: 0;
     padding: 0;
-  }
-
-  /* Luna typography base styles */
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
-    font-family: "Inter", system-ui, sans-serif;
-    font-weight: 700;
-    letter-spacing: -0.025em;
-  }
-
-  /* Smooth scrolling for navigation */
-  html {
-    scroll-behavior: smooth;
+    min-height: 100vh;
   }
 
   /* Scroll offset for fixed header navigation */
   section[id] {
-    scroll-margin-top: 4rem; /* 64px offset for mobile fixed header */
+    scroll-margin-top: 4rem;
   }
 
   @media (min-width: 768px) {
     section[id] {
-      scroll-margin-top: 4.5rem; /* 72px offset for tablet fixed header */
+      scroll-margin-top: 4.5rem;
     }
   }
 
   @media (min-width: 1024px) {
     section[id] {
-      scroll-margin-top: 5rem; /* 80px offset for desktop fixed header */
+      scroll-margin-top: 5rem;
     }
   }
 }
 
 @layer components {
-  /* Luna Button Variants */
-  .btn-luna-primary {
-    background-color: #8b5cf6;
-    color: white;
+  /* Luna Button Base */
+  .btn-luna {
     font-weight: 600;
     padding: 0.75rem 1.5rem;
-    border-radius: 0.5rem;
-    transition: all 0.2s;
+    border-radius: var(--radius);
+    transition: all 0.2s ease-in-out;
     border: none;
     cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+  }
+
+  .btn-luna:focus-visible {
+    outline: none;
+    box-shadow: 0 0 0 2px var(--ring), 0 0 0 4px oklch(from var(--ring) l c h / 0.2);
+  }
+
+  /* Button Variants */
+  .btn-luna-primary {
+    background-color: var(--primary);
+    color: var(--primary-foreground);
   }
 
   .btn-luna-primary:hover {
-    background-color: #7c3aed;
-  }
-
-  .btn-luna-primary:focus {
-    outline: none;
-    box-shadow: 0 0 0 2px #8b5cf6, 0 0 0 4px rgba(139, 92, 246, 0.2);
+    background-color: oklch(from var(--primary) calc(l - 0.1) c h);
   }
 
   .btn-luna-secondary {
-    background-color: #475569;
-    color: white;
-    font-weight: 600;
-    padding: 0.75rem 1.5rem;
-    border-radius: 0.5rem;
-    transition: all 0.2s;
-    border: none;
-    cursor: pointer;
+    background-color: var(--secondary);
+    color: var(--secondary-foreground);
   }
 
   .btn-luna-secondary:hover {
-    background-color: #334155;
+    background-color: oklch(from var(--secondary) calc(l - 0.1) c h);
   }
 
   .btn-luna-accent {
-    background-color: #f59e0b;
-    color: #1f2937;
-    font-weight: 600;
-    padding: 0.75rem 1.5rem;
-    border-radius: 0.5rem;
-    transition: all 0.2s;
-    border: none;
-    cursor: pointer;
+    background-color: var(--accent);
+    color: var(--accent-foreground);
   }
 
   .btn-luna-accent:hover {
-    background-color: #d97706;
+    background-color: oklch(from var(--accent) calc(l - 0.1) c h);
   }
 
-  /* Luna Card Styles */
+  /* Luna Card */
   .card-luna {
-    background-color: white;
-    border: 1px solid #e2e8f0;
-    border-radius: 0.5rem;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-    transition: box-shadow 0.2s;
+    background-color: var(--card);
+    color: var(--card-foreground);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    box-shadow: 0 1px 3px oklch(0 0 0 / 0.3);
+    transition: box-shadow 0.2s ease-in-out;
   }
 
   .card-luna:hover {
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  }
-
-  /* Luna Section Spacing */
-  .section-luna {
-    padding: 4rem 0;
-  }
-
-  @media (min-width: 768px) {
-    .section-luna {
-      padding: 6rem 0;
-    }
-  }
-
-  @media (min-width: 1024px) {
-    .section-luna {
-      padding: 8rem 0;
-    }
+    box-shadow: 0 4px 6px oklch(0 0 0 / 0.4);
   }
 
   /* Luna Container */
   .container-luna {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 1rem;
+    padding-inline: 1rem;
   }
 
   @media (min-width: 640px) {
     .container-luna {
-      padding: 0 1.5rem;
+      padding-inline: 1.5rem;
+    }
+  }
+
+
+  /* Luna Section */
+  .section-luna {
+    padding-block: 4rem;
+  }
+
+  @media (min-width: 768px) {
+    .section-luna {
+      padding-block: 6rem;
     }
   }
 
   @media (min-width: 1024px) {
-    .container-luna {
-      padding: 0 2rem;
+    .section-luna {
+      padding-block: 8rem;
     }
   }
 
-  /* Luna Hero Text Styles */
-  .hero-title {
-    font-size: 3rem;
-    font-weight: 700;
-    line-height: 1.1;
-    letter-spacing: -0.025em;
-  }
-
-  @media (min-width: 768px) {
-    .hero-title {
-      font-size: 4rem;
-      font-weight: 800;
-    }
-  }
-
-  .hero-subtitle {
-    font-size: 1.125rem;
-    line-height: 1.6;
-  }
-
-  @media (min-width: 768px) {
-    .hero-subtitle {
-      font-size: 1.25rem;
-    }
-  }
-
-  /* Hero section specific styles */
+  /* Hero Section */
   .hero-section {
     background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
   }
 
-  /* Touch-friendly button styles for mobile */
-  @media (max-width: 768px) {
-    .touch-target {
-      min-height: 44px;
-      min-width: 44px;
-    }
+  /* Typography */
+  .hero-title {
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    font-weight: 800;
+    line-height: 1.1;
+    letter-spacing: -0.025em;
+    color: var(--foreground);
   }
 
-  /* Luna Code Editor Styles */
-  .code-editor {
-    background-color: #0f172a;
-    color: #e2e8f0;
-    font-family: "JetBrains Mono", monospace;
-    border-radius: 0.5rem;
-    border: 1px solid #334155;
+  .hero-subtitle {
+    font-size: clamp(1.125rem, 2vw, 1.25rem);
+    line-height: 1.6;
+    color: var(--muted-foreground);
   }
 
-  /* Interactive Code Editor specific styles */
-  .code-editor-container {
-    font-family: "JetBrains Mono", "Fira Code", "Consolas", monospace;
+  /* Navigation */
+  .nav-link {
+    font-weight: 500;
+    color: var(--foreground);
+    background: none;
+    border: none;
+    cursor: pointer;
+    transition: color 0.2s ease-in-out;
+    text-decoration: none;
   }
 
-  .code-editor-container textarea {
-    font-family: inherit;
-    line-height: 1.5;
-    tab-size: 2;
+  .nav-link:hover {
+    color: var(--primary);
   }
 
-  .code-editor-container .syntax-highlight {
-    font-family: inherit;
-    line-height: 1.5;
+  .nav-link-mobile {
+    display: flex;
+    align-items: center;
+    min-height: 44px;
+    padding: 0.5rem 1rem;
+    color: var(--foreground);
+    font-weight: 500;
+    border-radius: var(--radius);
+    transition: all 0.2s ease-in-out;
+    text-decoration: none;
   }
 
-  /* Syntax highlighting colors for Luna theme */
-  .syntax-html-tag {
-    color: #60a5fa; /* Blue for HTML tags */
+  .nav-link-mobile:hover {
+    color: var(--primary);
+    background-color: var(--muted);
   }
 
-  .syntax-html-bracket {
-    color: #64748b; /* Gray for brackets */
-  }
-
-  .syntax-html-attribute {
-    color: #34d399; /* Green for attributes */
-  }
-
-  .syntax-html-string {
-    color: #fbbf24; /* Yellow for strings */
-  }
-
-  .syntax-css-selector {
-    color: #fbbf24; /* Yellow for CSS selectors */
-  }
-
-  .syntax-css-property {
-    color: #60a5fa; /* Blue for CSS properties */
-  }
-
-  .syntax-css-value {
-    color: #34d399; /* Green for CSS values */
-  }
-
-  .syntax-css-comment {
-    color: #64748b; /* Gray for comments */
-  }
-
-  .syntax-js-keyword {
-    color: #a78bfa; /* Purple for JS keywords */
-  }
-
-  .syntax-js-function {
-    color: #60a5fa; /* Blue for JS functions */
-  }
-
-  .syntax-js-string {
-    color: #34d399; /* Green for JS strings */
-  }
-
-  .syntax-js-comment {
-    color: #64748b; /* Gray for JS comments */
-  }
-
-  /* Floating code elements animation */
-  @keyframes float {
-    0%, 100% { transform: translateY(0px); }
-    50% { transform: translateY(-10px); }
-  }
-
-  .float-animation {
-    animation: float 3s ease-in-out infinite;
-  }
-
-  .float-animation-delayed {
-    animation: float 3s ease-in-out infinite;
-    animation-delay: 1s;
-  }
-
-  .float-animation-slow {
-    animation: float 4s ease-in-out infinite;
-    animation-delay: 0.5s;
-  }
-
-  /* Luna Animation Utilities */
+  /* Animation */
   .animate-on-scroll {
     opacity: 0;
     transform: translateY(1rem);
@@ -407,7 +234,7 @@
 }
 
 @layer utilities {
-  /* Luna spacing utilities */
+  /* Spacing utilities */
   .space-luna-sm > * + * {
     margin-top: 1rem;
   }
@@ -420,46 +247,28 @@
     margin-top: 3rem;
   }
 
-  /* Luna text utilities */
+  /* Text utilities */
   .text-balance {
     text-wrap: balance;
   }
 
   .text-section-title {
-    font-size: 2rem;
+    font-size: clamp(1.75rem, 3vw, 2rem);
     font-weight: 700;
     line-height: 1.25;
+    color: var(--foreground);
   }
 
   .text-card-title {
-    font-size: 1.5rem;
+    font-size: clamp(1.25rem, 2vw, 1.5rem);
     font-weight: 600;
     line-height: 1.3;
+    color: var(--foreground);
   }
 
-  /* Navigation utilities */
-  .nav-link {
-    font-weight: 500;
-    transition: color 0.2s;
-    background: none;
-    border: none;
-    cursor: pointer;
-  }
-
-  .nav-link-mobile {
-    display: flex;
-    align-items: center;
+  /* Touch targets for mobile */
+  .touch-target {
     min-height: 44px;
-    padding: 0.5rem 1rem;
-    color: #1f2937;
-    font-weight: 500;
-    text-align: left;
-    border-radius: 0.5rem;
-    transition: all 0.2s;
-  }
-
-  .nav-link-mobile:hover {
-    color: #8b5cf6;
-    background-color: #f8fafc;
+    min-width: 44px;
   }
 }

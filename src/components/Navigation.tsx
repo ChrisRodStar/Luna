@@ -1,6 +1,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
+import Link from 'next/link';
 
 export default function Navigation() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -79,128 +80,71 @@ export default function Navigation() {
     <header 
       className="fixed top-0 left-0 right-0 z-50 transition-all duration-300"
       style={{
-        backgroundColor: isScrolled ? 'rgba(255, 255, 255, 0.95)' : 'transparent',
+        backgroundColor: isScrolled ? 'rgba(30, 41, 59, 0.95)' : 'transparent',
         backdropFilter: isScrolled ? 'blur(8px)' : 'none',
-        borderBottom: isScrolled ? '1px solid #e2e8f0' : 'none',
-        boxShadow: isScrolled ? '0 1px 3px rgba(0, 0, 0, 0.1)' : 'none'
+        borderBottom: isScrolled ? '1px solid var(--border)' : 'none',
+        boxShadow: isScrolled ? '0 1px 3px rgba(0, 0, 0, 0.3)' : 'none'
       }}
     >
       <div className="container-luna">
-        <div className="flex items-center justify-between" style={{height: '4rem'}}>
-          {/* Logo */}
-          <div className="flex items-center" style={{gap: '0.5rem'}}>
-            <span style={{fontSize: '1.5rem'}}>🌙</span>
-            <span style={{
-              fontSize: '1.25rem', 
-              fontWeight: '700',
-              color: isScrolled ? '#1f2937' : '#ffffff'
-            }}>Luna</span>
-          </div>
+        <div className="flex items-center justify-between h-16">
+          {/* Logo - Now clickable home button */}
+          <button
+            onClick={() => scrollToSection('hero')}
+            className="flex items-center gap-2 bg-transparent border-none cursor-pointer transition-opacity hover:opacity-80"
+          >
+            <span className="text-2xl">🌙</span>
+            <span className="text-xl font-bold text-white">Luna</span>
+          </button>
 
           {/* Tablet/Desktop Navigation - Hidden on mobile, visible on md+ */}
-          <nav className="hidden md:flex items-center" style={{gap: '2rem'}}>
+          <nav className="hidden md:flex items-center gap-8">
             <button
               onClick={() => scrollToSection('courses')}
-              style={{
-                color: isScrolled ? '#1f2937' : '#ffffff',
-                fontWeight: '500',
-                transition: 'color 0.2s',
-                background: 'none',
-                border: 'none',
-                cursor: 'pointer'
-              }}
-              onMouseEnter={(e) => e.currentTarget.style.color = '#8b5cf6'}
-              onMouseLeave={(e) => e.currentTarget.style.color = isScrolled ? '#1f2937' : '#ffffff'}
+              className="nav-link text-white hover:text-primary"
             >
               Courses
             </button>
             <button
               onClick={() => scrollToSection('features')}
-              style={{
-                color: isScrolled ? '#1f2937' : '#ffffff',
-                fontWeight: '500',
-                transition: 'color 0.2s',
-                background: 'none',
-                border: 'none',
-                cursor: 'pointer'
-              }}
-              onMouseEnter={(e) => e.currentTarget.style.color = '#8b5cf6'}
-              onMouseLeave={(e) => e.currentTarget.style.color = isScrolled ? '#1f2937' : '#ffffff'}
+              className="nav-link text-white hover:text-primary"
             >
               Features
-            </button>
-            <button
-              onClick={() => scrollToSection('about')}
-              style={{
-                color: isScrolled ? '#1f2937' : '#ffffff',
-                fontWeight: '500',
-                transition: 'color 0.2s',
-                background: 'none',
-                border: 'none',
-                cursor: 'pointer'
-              }}
-              onMouseEnter={(e) => e.currentTarget.style.color = '#8b5cf6'}
-              onMouseLeave={(e) => e.currentTarget.style.color = isScrolled ? '#1f2937' : '#ffffff'}
-            >
-              About
             </button>
           </nav>
 
           {/* Tablet/Desktop CTA Button - Hidden on mobile, visible on md+ */}
-          <button className="hidden md:block btn-luna-primary">
-            Start Learning
-          </button>
+          <Link href="/signup">
+            <button className="hidden md:block btn-luna btn-luna-primary">
+              Start Learning
+            </button>
+          </Link>
 
           {/* Mobile Menu Button - Visible on mobile, hidden on md+ */}
           <button
             id="mobile-menu-button"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
-            className="md:hidden"
-            style={{
-              padding: '0.5rem',
-              borderRadius: '0.5rem',
-              border: 'none',
-              backgroundColor: 'transparent',
-              cursor: 'pointer',
-              transition: 'background-color 0.2s'
-            }}
-            onMouseEnter={(e) => e.currentTarget.style.backgroundColor = '#f8fafc'}
-            onMouseLeave={(e) => e.currentTarget.style.backgroundColor = 'transparent'}
+            className="md:hidden p-2 rounded-lg border-none bg-transparent cursor-pointer transition-colors hover:bg-white/10 touch-target"
             aria-label="Toggle mobile menu"
             aria-expanded={isMenuOpen}
           >
-            <div className="relative flex flex-col justify-center items-center" style={{width: '1.5rem', height: '1.5rem'}}>
+            <div className="relative flex flex-col justify-center items-center w-6 h-6">
               <span
+                className="absolute block w-5 h-0.5 bg-white transition-all duration-300 ease-in-out"
                 style={{
-                  position: 'absolute',
-                  display: 'block',
-                  width: '1.25rem',
-                  height: '2px',
-                  backgroundColor: isScrolled ? '#1f2937' : '#ffffff',
-                  transition: 'all 0.3s ease-in-out',
                   transform: isMenuOpen ? 'rotate(45deg)' : 'translateY(-6px)'
                 }}
               />
               <span
+                className="absolute block w-5 h-0.5 bg-white transition-all duration-300 ease-in-out"
                 style={{
-                  position: 'absolute',
-                  display: 'block',
-                  width: '1.25rem',
-                  height: '2px',
-                  backgroundColor: isScrolled ? '#1f2937' : '#ffffff',
-                  transition: 'all 0.3s ease-in-out',
                   opacity: isMenuOpen ? 0 : 1,
                   transform: isMenuOpen ? 'scale(0)' : 'scale(1)'
                 }}
               />
               <span
+                className="absolute block w-5 h-0.5 bg-white transition-all duration-300 ease-in-out"
                 style={{
-                  position: 'absolute',
-                  display: 'block',
-                  width: '1.25rem',
-                  height: '2px',
-                  backgroundColor: isScrolled ? '#1f2937' : '#ffffff',
-                  transition: 'all 0.3s ease-in-out',
                   transform: isMenuOpen ? 'rotate(-45deg)' : 'translateY(6px)'
                 }}
               />
@@ -213,40 +157,35 @@ export default function Navigation() {
           id="mobile-nav"
           className="md:hidden overflow-hidden transition-all duration-300 ease-in-out"
           style={{
-            maxHeight: isMenuOpen ? '24rem' : '0',
+            maxHeight: isMenuOpen ? '16rem' : '0',
             opacity: isMenuOpen ? 1 : 0,
             paddingBottom: isMenuOpen ? '1.5rem' : '0'
           }}
         >
-          <div className="flex flex-col pt-4" style={{gap: '0.5rem', borderTop: '1px solid #e2e8f0'}}>
+          <div className="flex flex-col pt-4 gap-2 border-t border-white/20">
             <button
               onClick={() => scrollToSection('courses')}
-              className="nav-link-mobile"
+              className="nav-link-mobile text-white hover:text-primary hover:bg-white/10"
             >
               Courses
             </button>
             <button
               onClick={() => scrollToSection('features')}
-              className="nav-link-mobile"
+              className="nav-link-mobile text-white hover:text-primary hover:bg-white/10"
             >
               Features
             </button>
-            <button
-              onClick={() => scrollToSection('about')}
-              className="nav-link-mobile"
-            >
-              About
-            </button>
             
             {/* Mobile CTA Button */}
-            <div style={{paddingTop: '1rem'}}>
-              <button 
-                className="btn-luna-primary"
-                style={{width: '100%', minHeight: '44px'}}
-                onClick={() => setIsMenuOpen(false)}
-              >
-                Start Learning
-              </button>
+            <div className="pt-4">
+              <Link href="/signup">
+                <button 
+                  className="btn-luna btn-luna-primary w-full touch-target"
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  Start Learning
+                </button>
+              </Link>
             </div>
           </div>
         </nav>

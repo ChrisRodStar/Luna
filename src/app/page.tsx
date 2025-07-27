@@ -1,5 +1,6 @@
 import Navigation from "@/components/Navigation";
 import InteractiveCodeEditor from "@/components/InteractiveCodeEditor";
+import CoursesSection from "@/components/CoursesSection";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import Image from "next/image";
@@ -73,33 +74,7 @@ export default function Home() {
       </section>
 
       {/* Course/Learning Path Section */}
-      <section id="courses" className="w-full section-luna">
-        <div className="container-luna">
-          <h2 className="text-section-title text-center mb-12">
-            Choose Your Learning Path
-          </h2>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            <div className="card-luna p-6">
-              <h3 className="text-card-title mb-4">Full-Stack Development</h3>
-              <p className="text-muted-foreground">
-                Master HTML, CSS, JavaScript, React, TypeScript, and Next.js
-              </p>
-            </div>
-            <div className="card-luna p-6">
-              <h3 className="text-card-title mb-4">Frontend Specialist</h3>
-              <p className="text-muted-foreground">
-                Focus on HTML, CSS, JavaScript, and React
-              </p>
-            </div>
-            <div className="card-luna p-6">
-              <h3 className="text-card-title mb-4">AI-Enhanced Development</h3>
-              <p className="text-muted-foreground">
-                Coming soon - Learn with AI assistance
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
+      <CoursesSection />
 
       {/* Platform Features Section */}
       <section id="features" className="w-full section-luna">

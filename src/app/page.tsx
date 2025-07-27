@@ -2,6 +2,7 @@ import Navigation from "@/components/Navigation";
 import InteractiveCodeEditor from "@/components/InteractiveCodeEditor";
 import CoursesSection from "@/components/CoursesSection";
 import PlatformFeatures from "@/components/PlatformFeatures";
+import GamificationShowcase from "@/components/GamificationShowcase";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import Image from "next/image";
@@ -79,6 +80,9 @@ export default function Home() {
 
       {/* Platform Features Section */}
       <PlatformFeatures />
+
+      {/* Gamification Showcase Section */}
+      <GamificationShowcase />
 
       {/* Final CTA Section */}
       <section id="about" className="w-full text-white section-luna">

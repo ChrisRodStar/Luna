@@ -231,6 +231,40 @@
     opacity: 1;
     transform: translateY(0);
   }
+
+  /* Platform Features Animations */
+  @media (prefers-reduced-motion: no-preference) {
+    .animate-on-scroll {
+      transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    
+    .animate-on-scroll.visible {
+      animation: slideInUp 0.8s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+    }
+  }
+
+  @keyframes slideInUp {
+    from {
+      opacity: 0;
+      transform: translateY(2rem);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  /* Respect reduced motion preferences */
+  @media (prefers-reduced-motion: reduce) {
+    .animate-on-scroll {
+      transition: opacity 0.3s ease;
+      transform: none;
+    }
+    
+    .animate-on-scroll.visible {
+      animation: none;
+    }
+  }
 }
 
 @layer utilities {

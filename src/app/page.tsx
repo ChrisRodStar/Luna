@@ -1,6 +1,7 @@
 import Navigation from "@/components/Navigation";
 import InteractiveCodeEditor from "@/components/InteractiveCodeEditor";
 import CoursesSection from "@/components/CoursesSection";
+import PlatformFeatures from "@/components/PlatformFeatures";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import Image from "next/image";
@@ -77,30 +78,7 @@ export default function Home() {
       <CoursesSection />
 
       {/* Platform Features Section */}
-      <section id="features" className="w-full section-luna">
-        <div className="container-luna">
-          <h2 className="text-section-title text-center mb-12">
-            Why Choose Luna?
-          </h2>
-          <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div className="space-luna-md">
-              <h3 className="text-card-title">Gamified Learning</h3>
-              <p className="text-muted-foreground">
-                Learn with interactive exercises, challenges, and projects,
-                crafted by learning experts.
-              </p>
-            </div>
-            <div className="card-luna p-4">
-              <div className="text-sm mb-2 text-accent">// Example lesson</div>
-              <div className="text-code-foreground">
-                <span className="text-primary">const</span>{" "}
-                <span className="text-accent">greeting</span> =
-                <span className="text-green-400">"Hello, Luna!"</span>;
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+      <PlatformFeatures />
 
       {/* Final CTA Section */}
       <section id="about" className="w-full text-white section-luna">
